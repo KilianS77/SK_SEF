@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bienvenue!{% endblock %}</title>
+
+    <!-- Lien vers le CSS de Bootstrap local -->
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+</head>
+<body>
+    {% block body %}{% endblock %}
+
+    <!-- JavaScript de Bootstrap local -->
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>

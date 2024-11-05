@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - SEF ESCRIME{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #003366;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #005cbf;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            color : white;
+        }
+
+        h1 {
+            color: #003366;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #005cbf;
+        }
+
+        /* Styles pour les petits écrans */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .navbar a {
+                display: block;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<nav class="navbar">
+    <div class="navbar-brand">
+        <a href="#">SEF ESCRIME</a>
+    </div>
+    <div class="navbar-links">
+        <a class="nav-link" href="{{ path('login') }}">Login</a>
+        <a class="nav-link" href="{{ path('profile') }}">Profile</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>Bienvenue au SEF ESCRIME!</h1>
+    <p>Découvrez notre club d’escrime, suivez vos performances, et réservez vos leçons avec nos maîtres d’armes.</p>
+    <p>Connectez-vous pour accéder à toutes les fonctionnalités de notre webapp.</p>
+    <a href="{{ path('login') }}" class="btn">Se connecter</a>
+</div>
+{% endblock %}
